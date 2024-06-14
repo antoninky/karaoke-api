@@ -1,6 +1,7 @@
 import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
+import cors from "cors";
 
 import { initIo } from "./socket_io/index.mjs";
 import { initExpress } from "./express/index.mjs";
@@ -15,8 +16,10 @@ const socketIo = new Server(server, {
     credentials: true,
   },
 });
-
+// Apply CORS middleware
 app.use(express.json());
+// Middleware to parse URL-encoded bodies
+app.use(cors());
 initIo(socketIo);
 
 initExpress(app);
