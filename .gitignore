@@ -1,4 +1,4 @@
 /node_modules
 app/assets/rooms.json
 app/assets/rooms.json
-app/assets/rooms.json
+./app/assets/rooms.json

@@ -12,7 +12,7 @@ export function createRoom(server) {
       console.log(roomExist);
     } while (roomExist.length > 0);
     addRoom(code);
-    res.send({ succes: true, data: { room_code: code } });
+    res.send({ success: true, data: { room_code: code } });
   });
 }
 
