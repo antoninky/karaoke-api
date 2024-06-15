@@ -1,3 +1,5 @@
+import data from "../../assets/rooms.json" assert { type: "json" };
+
 export function getRooms() {
-  return [{ code: "23123" }];
+  return data.rooms;
 }
